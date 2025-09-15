@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8" />
+    <title>People Counting</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+<body>
+    <div class="header">PEOPLE COUNTING</div>
+
+    <div class="video-wrapper">
+        <div class="video-container">
+            <img id="video" src="{{ url_for('video_feed') }}" width="800" height="480" alt="Video stream">
+        </div>
+    </div>
+
+    <!-- Counter box -->
+    <div class="counter-container">
+        <div class="counter in">
+            <span class="label">IN</span>
+            <span class="value" id="inCount">0</span>
+        </div>
+        <div class="counter out">
+            <span class="label">OUT</span>
+            <span class="value" id="outCount">0</span>
+        </div>
+    </div>
+
+    <!-- Status bar -->
+    <div class="status-area">
+        <span id="status">Status: Stopped</span>
+        &nbsp;|&nbsp;
+        FPS: <span id="fps">0.0</span>
+    </div>
+
+    <!-- Control buttons -->
+    <div class="controls">
+        <button id="btnStart">Start</button>
+        <button id="btnStop">Stop</button>
+        <button id="btnReset">Reset</button>
+    </div>
+</body>
+</html>

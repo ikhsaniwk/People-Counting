@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #f4f4f4;
+}
+
+/* Header */
+.header {
+    background: green;
+    color: white;
+    padding: 20px;
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+/* Video */
+.video-wrapper {
+    margin-top: 20px;
+}
+
+.video-container {
+    margin: 10px auto;
+    border: 3px solid #333;
+    display: inline-block;
+    background: #000;
+}
+
+/* Counter container */
+.counter-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 900px;
+}
+
+/* Counter box */
+.counter {
+    flex: 1;
+    padding: 20px;
+    margin: 0 20px;
+    color: white;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.counter .label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+
+.counter .value {
+    font-size: 64px;
+    font-family: 'Courier New', Courier, monospace;
+    background: #111;
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: inline-block;
+    min-width: 100px;
+}
+
+.counter.out {
+    background: darkred;
+}
+
+.counter.in {
+    background: darkgreen;
+}
+
+/* Status area */
+.status-area {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Controls */
+.controls {
+    margin: 20px 0 40px 0;
+}
+
+.controls button {
+    padding: 10px 18px;
+    margin: 0 8px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    background-color: #1976d2;
+    color: white;
+    cursor: pointer;
+}
+.controls button:hover {
+    background-color: #1565c0;
+}
