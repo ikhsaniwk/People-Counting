@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8" />
+    <title>Dashboard People Counting</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}" defer></script>
+</head>
+<body>
+    <div class="header">PEOPLE COUNTING DASHBOARD</div>
+
+    <!-- KPI -->
+    <div class="counter-container">
+        <div class="counter in">
+            <span class="label">IN</span>
+            <span class="value" id="inCount">0</span>
+        </div>
+        <div class="counter out">
+            <span class="label">OUT</span>
+            <span class="value" id="outCount">0</span>
+        </div>
+        <div class="counter total">
+            <span class="label">Total</span>
+            <span class="value" id="totalCount">0</span>
+        </div>
+    </div>
+
+    <!-- Grafik Tren -->
+   <!-- Grafik Tren -->
+<div class="chart-container">
+    <h3>Tren Pengunjung Terakhir</h3>
+    <canvas id="trendChart" width="600" height="300"></canvas>
+</div>
+
+
+    <!-- Tabel Log -->
+    <div class="table-container">
+        <h3>10 Data Terakhir</h3>
+        <table id="logTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Timestamp</th>
+                    <th>Direction</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</body>
+</html>

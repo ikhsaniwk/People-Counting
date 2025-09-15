@@ -59,3 +59,33 @@ document.addEventListener('DOMContentLoaded', () => {
     updateStats();
     setInterval(updateStats, 500); // 500 ms
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Event existing
+    document.getElementById('btnStart').addEventListener('click', async () => {
+        await fetch('/start', {method: 'POST'});
+        updateStats();
+    });
+
+    document.getElementById('btnStop').addEventListener('click', async () => {
+        await fetch('/stop', {method: 'POST'});
+        updateStats();
+    });
+
+    document.getElementById('btnReset').addEventListener('click', async () => {
+        await fetch('/reset', {method: 'POST'});
+        updateStats();
+        document.getElementById("inCount").innerText = 0;
+        document.getElementById("outCount").innerText = 0;
+    });
+
+    // Tombol Dashboard
+    document.getElementById('btnDashboard').addEventListener('click', () => {
+        window.location.href = '/dashboard'; // arahkan ke halaman baru
+    });
+
+    // Start polling
+    updateStats();
+    setInterval(updateStats, 500);
+});
+

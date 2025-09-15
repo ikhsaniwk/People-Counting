@@ -41,7 +41,7 @@ body {
     flex: 1;
     padding: 20px;
     margin: 0 20px;
-    color: white;
+    color: rgb(0, 255, 9);
     border-radius: 4px;
     font-weight: bold;
     text-align: center;
@@ -96,4 +96,24 @@ body {
 }
 .controls button:hover {
     background-color: #1565c0;
+}
+
+.chart-container {
+    width: 80%; /* lebih kecil dari 90% sebelumnya */
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 15px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+}
+
+.chart-container h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+canvas#trendChart {
+    width: 100% !important;
+    height: 300px !important; /* ukuran lebih kecil */
 }

@@ -158,6 +158,11 @@ def inference_thread():
 def index():
     return render_template('index.html')
 
+@app.route('/dashboard')
+def dashboard():
+    """Halaman dashboard analisis"""
+    return render_template('dashboard.html')
+
 
 @app.route('/video_feed')
 def video_feed():
